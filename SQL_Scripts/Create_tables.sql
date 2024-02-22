@@ -8,6 +8,8 @@ CREATE TABLE Students (
     student_fullname VARCHAR(60) NOT NULL,
     group_id INTEGER,
     FOREIGN KEY (group_id) REFERENCES Groups (id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE
 );
 --Table: Groups
 --Поле id: Основний ключ задається автоматично
